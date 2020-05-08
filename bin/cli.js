@@ -9,6 +9,12 @@ const { program } = require('commander');
 const powerRegex = /-{0,1}\d{1,5},-{0,1}\d{1,5},\d{1,5}/;
 const simpleCoordinatesRegex = /\d{1,5},\d{1,5}/;
 
+/**
+ * Validates the -p parameter and transforms it into a list of {PowerStation} objects
+ *
+ * @param value {string} - the value of -p parameter
+ * @returns {PowerStation[]}
+ */
 const power = value => value.split(';').map(coordinatesAndRange => {
     if (!powerRegex.test(coordinatesAndRange)) {
         console.error(`The coordinates with range "${coordinatesAndRange}" are in a wrong format`);
@@ -18,6 +24,12 @@ const power = value => value.split(';').map(coordinatesAndRange => {
     return new PowerStation(parseFloat(x), parseFloat(y), parseFloat(range));
 });
 
+/**
+ * Validates the -y parameter and parses the coordinates
+ *
+ * @param value {string} - the value of the -y parameter
+ * @returns {{x: number, y: number}}
+ */
 const simpleCoordinates = value => {
     if (!simpleCoordinatesRegex.test(value)) {
         console.error(`The coordinates "${value}" are in a wrong format`);
