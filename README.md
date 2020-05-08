@@ -25,6 +25,8 @@ use the command `find-best-power-station` to execute the application.
 To test the project execute simple `npm test`.
 This will trigger all unit and integration tests as well as generate 
 a test report at `./testReport.html` that you can publish from github actions.
+Moreover a test coverage report is generated at `./coverage`. That's another useful thing to export from
+your build job.
 
 # Usage
 
