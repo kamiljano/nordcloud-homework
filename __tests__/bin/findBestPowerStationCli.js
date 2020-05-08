@@ -10,11 +10,11 @@ const buildCommand = builder => {
 
   if (builder.powerStations.length) {
       const powerStations = builder.powerStations.map(station => `${station.x},${station.y},${station.range}`);
-      command += `-p ${powerStations.join(';')} `;
+      command += `-p "${powerStations.join(';')}" `;
   }
 
   if (builder.yourLocation) {
-      command += `-y ${builder.yourLocation.x},${builder.yourLocation.y}`;
+      command += `-y "${builder.yourLocation.x},${builder.yourLocation.y}"`;
   }
 
   return command;

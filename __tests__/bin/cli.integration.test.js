@@ -15,7 +15,7 @@ describe('Given the find-best-power-station tool', () => {
         expect(result.stdout).toEqual('Best link station for point 0,1 is 0,0 with power 81');
     });
 
-    test('When entering the power stations with an invalid value, Then the application is exits with error 2 and the message specifying the wrong coordinates format is displayed', async () => {
+    test('When entering the power stations with an invalid value, Then the application exits with error 2 and the message specifying the wrong coordinates format is displayed', async () => {
         const result = await new FindBestPowerStationCli()
             .withPowerStation(0, 0, 10)
             .withPowerStation(0, 5, 'lol')

@@ -4,7 +4,7 @@
   "description": "A simple application allowing you find the most suitable link station",
   "main": "index.js",
   "scripts": {
-    "test": "jest test"
+    "test": "eslint . && jest test"
   },
   "keywords": [
     "power",

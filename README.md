@@ -47,6 +47,6 @@ Options:
 # Example successful execution
 
 ```
-$ find-best-power-station -p 0,0,10;0,5,10 -y 0,1
+$ find-best-power-station -p "0,0,10;0,5,10" -y "0,1"
 Best link station for point 0,1 is 0,0 with power 81
 ```

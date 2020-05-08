@@ -2,3 +2,4 @@
 *.iml
 testReport.html
 /coverage/
+/node_modules/
