@@ -1,0 +1,15 @@
+{
+  "name": "nordcloud-homework",
+  "version": "1.0.0",
+  "description": "A simple application allowing you find the most suitable link station",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
