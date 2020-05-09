@@ -1,3 +1,5 @@
+![Test application](https://github.com/kamiljano/nordcloud-homework/workflows/Test%20application/badge.svg?branch=master)
+
 # About
 
 The application finds the power station with that gives you the most power based
