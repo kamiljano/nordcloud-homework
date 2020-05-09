@@ -7,7 +7,7 @@ const { PowerStation, forPowerStations } = require('../');
 const { program } = require('commander');
 
 const powerRegex = /-{0,1}\d{1,5},-{0,1}\d{1,5},\d{1,5}/;
-const simpleCoordinatesRegex = /\d{1,5},\d{1,5}/;
+const simpleCoordinatesRegex = /-{0,1}\d{1,5},-{0,1}\d{1,5}/;
 
 /**
  * Validates the -p parameter and transforms it into a list of {PowerStation} objects

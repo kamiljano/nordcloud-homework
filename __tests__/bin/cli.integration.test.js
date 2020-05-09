@@ -15,6 +15,17 @@ describe('Given the find-best-power-station tool', () => {
         expect(result.stdout).toEqual('Best link station for point 0,1 is 0,0 with power 81');
     });
 
+    test('When entering the valid sub-zero parameters, Then the valid result is printed out', async () => {
+        const result = await new FindBestPowerStationCli()
+            .withPowerStation(-1, -1, 10)
+            .withPowerStation(0, -6, 10)
+            .withYourLocation(-1, -2)
+            .execute();
+
+        expect(result.code).toBe(0);
+        expect(result.stdout).toEqual('Best link station for point -1,-2 is -1,-1 with power 81');
+    });
+
     test('When entering the power stations with an invalid value, Then the application exits with error 2 and the message specifying the wrong coordinates format is displayed', async () => {
         const result = await new FindBestPowerStationCli()
             .withPowerStation(0, 0, 10)
