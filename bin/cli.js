@@ -6,8 +6,8 @@ const info = require('../package.json');
 const { PowerStation, forPowerStations } = require('../');
 const { program } = require('commander');
 
-const powerRegex = /-{0,1}\d{1,5},-{0,1}\d{1,5},\d{1,5}/;
-const simpleCoordinatesRegex = /-{0,1}\d{1,5},-{0,1}\d{1,5}/;
+const powerRegex = /^-?(?:(?:\d{1,6})|(?:\d{1,6}\.\d{1,6})),-?(?:(?:\d{1,6})|(?:\d{1,6}\.\d{1,6})),(?:(?:\d{1,6})|(?:\d{1,6}\.\d{1,6}))$/;
+const simpleCoordinatesRegex = /^-?(?:(?:\d{1,6})|(?:\d{1,6}\.\d{1,6})),-?(?:(?:\d{1,6})|(?:\d{1,6}\.\d{1,6}))$/;
 
 /**
  * Validates the -p parameter and transforms it into a list of {PowerStation} objects
